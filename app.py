@@ -7,6 +7,7 @@ from PIL import Image
 
 # Load the environment variables
 load_dotenv()
+# print(os.getenv("GOOGLE_API_KEY"))
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
@@ -52,3 +53,4 @@ if submit:
     image_data = image_setup(uploaded_file)
     response = generate_response(input_prompt, image_data, input)
     st.write(response)
+
